@@ -1,0 +1,37 @@
+:host {
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 50px 150px;
+  grid-template-rows: 1.5rem 1rem;
+  grid-template-areas: "imagen nombre"
+  "imagen perfil";
+  width: 100%;
+  }
+  .imagen {
+  grid-area: imagen;
+  align-self: center;
+  justify-self: center;
+  font-size: 2rem;
+  color: rgba(200,200,200, 0.87);
+  padding-bottom: 12px;
+  }
+  .nombre {
+  grid-area: nombre;
+  align-self: end;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  }
+  .perfil {
+  grid-area: perfil;
+  align-self: start;
+  padding-left: 10px;
+  font-size: 0.6rem;
+  line-height: 0.7rem;
+  color: rgba(51, 51, 51, 0.50);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  }
