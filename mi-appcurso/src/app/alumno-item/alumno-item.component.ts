@@ -11,6 +11,7 @@ export class AlumnoItemComponent implements OnInit {
 
   alumno = alumnoData;
   perfiles = new PerfilesList();
+  seleccionado = false;
 
   constructor() { }
 
@@ -20,4 +21,8 @@ export class AlumnoItemComponent implements OnInit {
   Perfil( perfilID: number) {
     return this.perfiles.Descripcion(perfilID);
     }
+
+  cambiarSeleccion() {
+    this.seleccionado = ! this.seleccionado;
+  }
 }
