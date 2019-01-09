@@ -7,6 +7,8 @@ export class Alumno {
   public activo: boolean,
   public perfilID: number
   ) {}
-  }
-  const alumnoData = new Alumno(1, 'Juan', 'Perez', 1, true, 0);
-  export { alumnoData };
+}
+
+const alumnoData = new Alumno(1, 'Juan', 'Perez', 1, true, 0);
+
+export { alumnoData };
