@@ -1,4 +1,4 @@
-:item-container {
+.item-container {
   padding: 0.5rem;
   background-color: #fff;
   border-radius: 6px;
@@ -35,3 +35,16 @@
   letter-spacing: 1px;
   font-weight: 700;
   }
+
+  .seleccionado{
+    background-color: #606fc8;
+    color: #f8f8f8;
+  }
+
+  .seleccionado > .perfil {
+    color: rgba(230,230,230, 0.87);
+    }
+
+  .seleccionado> mat-icon {
+    color: rgba(230,230,230, 0.87);
+    }
