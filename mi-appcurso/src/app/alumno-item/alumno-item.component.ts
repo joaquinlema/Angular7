@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PerfilesList } from '../entities/item-list.entity';
+import { alumnoData } from '../entities/alumno.entity';
 
 @Component({
   selector: 'app-alumno-item',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlumnoItemComponent implements OnInit {
 
+  alumno = alumnoData;
+  perfiles = new PerfilesList();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  Perfil( perfilID: number) {
+    return this.perfiles.Descripcion(perfilID);
+    }
 }
