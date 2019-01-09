@@ -8,7 +8,7 @@ export class ItemList {
 export class GenericList {
   public list: ItemList[];
 
-  public Descripcion(id: number){
+  public Descripcion(id: number) {
     return this.list.find(item =>  item.id === id).descripcion;
   }
 }
