@@ -10,7 +10,8 @@ import { Alumno } from '../entities/alumno.entity';
 export class AlumnoItemComponent implements OnInit {
 
   perfiles = new PerfilesList();
-  @Input() alumno: Alumno;
+
+  @Input() alumno: Alumno; // instancia del alumno obtenido de alumno lista
   @Input() seleccionado = false;
   @Output() seleccion = new EventEmitter<Alumno>();
 
@@ -23,7 +24,7 @@ export class AlumnoItemComponent implements OnInit {
     return this.perfiles.Descripcion(perfilID);
     }
 
-  cambiarSeleccion() {
-    this.seleccionado = ! this.seleccionado;
+  Seleccionar() {
+    this.seleccion.emit(this.alumno);
   }
 }
