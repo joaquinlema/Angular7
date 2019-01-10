@@ -1,3 +1,7 @@
-<p>
-  alumno-manager works!
-</p>
+<div class="contenido">
+  <app-alumno-lista
+    [alumnos]="alumnos"
+    (seleccionar)="SeleccionarAlumno($event)"
+  ></app-alumno-lista>
+</div>
+

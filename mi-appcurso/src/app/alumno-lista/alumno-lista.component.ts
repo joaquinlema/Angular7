@@ -10,7 +10,7 @@ export class AlumnoListaComponent implements OnInit {
 
   @Input() alumnos: Alumno[];
   @Input() alumnoSeleccionado: Alumno;
-  @Output() Seleccionar = new EventEmitter<Alumno>();
+  @Output() seleccion = new EventEmitter<Alumno>();
 
   constructor() { }
 
@@ -19,7 +19,7 @@ export class AlumnoListaComponent implements OnInit {
 
   SeleccionarAlumno(alumno: Alumno) {
     this.alumnoSeleccionado = alumno;
-    this.Seleccionar.emit(alumno);
-    }
+    this.seleccion.emit(alumno);
+  }
 
 }
