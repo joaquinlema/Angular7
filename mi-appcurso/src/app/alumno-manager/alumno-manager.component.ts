@@ -12,7 +12,7 @@ export class AlumnoManagerComponent implements OnInit {
   alumnos: Alumno[];
 
   constructor() {
-    this._alumnosData  = new AlumnoData();
+    this._alumnosData  = new AlumnoData(); // deberia ser un servicip luego se cambiara
     this.alumnos = this._alumnosData.GetAll();
   }
 

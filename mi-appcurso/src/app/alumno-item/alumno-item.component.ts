@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { PerfilesList } from '../entities/item-list.entity';
-import { alumnoData } from '../entities/alumno.entity';
+import { Alumno } from '../entities/alumno.entity';
 
 @Component({
   selector: 'app-alumno-item',
@@ -9,9 +9,10 @@ import { alumnoData } from '../entities/alumno.entity';
 })
 export class AlumnoItemComponent implements OnInit {
 
-  alumno = alumnoData;
   perfiles = new PerfilesList();
-  seleccionado = false;
+  @Input() alumno: Alumno;
+  @Input() seleccionado = false;
+  @Output() seleccion = new EventEmitter<Alumno>();
 
   constructor() { }
 
