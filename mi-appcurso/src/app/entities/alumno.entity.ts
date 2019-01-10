@@ -26,7 +26,7 @@ export class AlumnoData {
   ];
   constructor() {}
 
-  GetAll(){
+  GetAll() {
     return this.alumnos;
   }
 
