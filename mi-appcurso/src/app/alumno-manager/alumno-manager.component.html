@@ -1,4 +1,5 @@
 <div class="contenido">
+    <app-search-box (Search)="Filtrar($event)"></app-search-box>
   <app-alumno-lista
     [alumnos]="alumnos"
     (seleccionar)="SeleccionarAlumno($event)"

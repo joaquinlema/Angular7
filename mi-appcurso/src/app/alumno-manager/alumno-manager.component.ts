@@ -21,6 +21,12 @@ export class AlumnoManagerComponent implements OnInit {
   }
 
   SeleccionarAlumno(alumno: Alumno) {
-
+    this.alumnoSeleccionado = alumno;
+    console.log(alumno);
   }
+
+  Filtrar(filtrar: string) {
+     this.alumnos = this._alumnosData.SearchByNombreApellido(filtrar);
+    }
+
 }
