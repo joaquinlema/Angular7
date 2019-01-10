@@ -7,12 +7,14 @@ import { AlumnoItemComponent } from './alumno-item/alumno-item.component';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { AlumnoManagerComponent } from './alumno-manager/alumno-manager.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlumnoItemComponent,
-    MenuComponent
+    MenuComponent,
+    AlumnoManagerComponent
   ],
   imports: [
     BrowserModule,
