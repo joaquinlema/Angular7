@@ -6,9 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlumnoItemComponent } from './alumno-item/alumno-item.component';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule,
+  MatIconModule, MatListModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { AlumnoManagerComponent } from './alumno-manager/alumno-manager.component';
 import { AlumnoListaComponent } from './alumno-lista/alumno-lista.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { AlumnoListaComponent } from './alumno-lista/alumno-lista.component';
     AlumnoItemComponent,
     MenuComponent,
     AlumnoManagerComponent,
-    AlumnoListaComponent
+    AlumnoListaComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,9 @@ import { AlumnoListaComponent } from './alumno-lista/alumno-lista.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
