@@ -9,6 +9,32 @@ export class Alumno {
   ) {}
 }
 
-const alumnoData = new Alumno(1, 'Juan', 'Perez', 1, true, 0);
+// const alumnoData = new Alumno(1, 'Juan', 'Perez', 1, true, 0);
 
-export { alumnoData };
+// export { alumnoData };
+
+export class AlumnoData {
+  private alumnos: Alumno[] = [
+    {id: 1, nombre: 'Juan', apellido: 'Perez', sexoID: 1 , perfilID: 0, activo:
+    true},
+    {id: 2, nombre: 'Pedro', apellido: 'Garcia', sexoID: 1 , perfilID: 1, activo:
+    true},
+    {id: 3, nombre: 'Ana', apellido: 'Romero', sexoID: 0, perfilID: 2, activo:
+    true},
+    {id: 4, nombre: 'Maria', apellido: 'Gutierrez', sexoID: 0, perfilID: 0,
+    activo: true}
+  ];
+  constructor() {}
+
+  GetAll(){
+    return this.alumnos;
+  }
+
+  GetById(id: number) {
+    return this.alumnos.find(a => a.id === id);
+  }
+
+  SearchByNombreApellido(nombre: string) {
+    return this.alumnos.filter(item => (item.nombre + ' ' + item.apellido).toLowerCase().indexOf(nombre.toLowerCase()) >= 0);
+  }
+}
