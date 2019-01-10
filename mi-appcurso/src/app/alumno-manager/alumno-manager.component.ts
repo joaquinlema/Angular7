@@ -7,6 +7,7 @@ import { Alumno, AlumnoData } from '../entities/alumno.entity';
   styleUrls: ['./alumno-manager.component.css']
 })
 export class AlumnoManagerComponent implements OnInit {
+
   private _alumnosData: AlumnoData;
   alumnoSeleccionado: Alumno = null;
   alumnos: Alumno[];
@@ -15,7 +16,6 @@ export class AlumnoManagerComponent implements OnInit {
     this._alumnosData  = new AlumnoData(); // deberia ser un servicip luego se cambiara
     this.alumnos = this._alumnosData.GetAll();
   }
-
 
   ngOnInit() {
   }

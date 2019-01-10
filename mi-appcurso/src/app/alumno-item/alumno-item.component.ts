@@ -12,7 +12,7 @@ export class AlumnoItemComponent implements OnInit {
   perfiles = new PerfilesList();
 
   @Input() alumno: Alumno; // instancia del alumno obtenido de alumno lista
-  @Input() seleccionado = false;
+  @Input() seleccionado = true;
   @Output() seleccion = new EventEmitter<Alumno>();
 
   constructor() { }
@@ -26,5 +26,6 @@ export class AlumnoItemComponent implements OnInit {
 
   Seleccionar() {
     this.seleccion.emit(this.alumno);
+    this.seleccionado = ! this.seleccionado;
   }
 }
