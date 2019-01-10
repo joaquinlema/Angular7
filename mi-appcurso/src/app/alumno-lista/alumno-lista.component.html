@@ -1,3 +1,9 @@
-<p>
-  alumno-lista works!
-</p>
+<ul>
+  <li *ngFor="let alumno of alumnos">
+  <app-alumno-item
+  [alumno]="alumno"
+  [seleccionado]="alumnoSeleccionado === alumno"
+  (Seleccion)="SeleccionarAlumno($event)"
+></app-alumno-item>
+</li>
+</ul>
