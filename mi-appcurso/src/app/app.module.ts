@@ -8,13 +8,15 @@ import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { AlumnoManagerComponent } from './alumno-manager/alumno-manager.component';
+import { AlumnoListaComponent } from './alumno-lista/alumno-lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlumnoItemComponent,
     MenuComponent,
-    AlumnoManagerComponent
+    AlumnoManagerComponent,
+    AlumnoListaComponent
   ],
   imports: [
     BrowserModule,
