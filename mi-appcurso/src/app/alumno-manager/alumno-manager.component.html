@@ -1,8 +1,13 @@
-<div class="contenido">
+<div class="grid-container">
+  <div class="columnaizq">
     <app-search-box (Search)="Filtrar($event)"></app-search-box>
-  <app-alumno-lista
-    [alumnos]="alumnos"
-    (Seleccionar)="SeleccionarAlumno($event)"
-  ></app-alumno-lista>
+    <app-alumno-lista
+      [alumnos]="alumnos"
+      (Seleccionar)="SeleccionarAlumno($event)">
+    </app-alumno-lista>
+  </div>
+  <div class="columnaDer">
+    <app-alumno-edicion></app-alumno-edicion>
+  </div>
 </div>
 

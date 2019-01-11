@@ -7,10 +7,12 @@ import { AlumnoItemComponent } from './alumno-item/alumno-item.component';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule,
-  MatIconModule, MatListModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+  MatIconModule, MatListModule, MatFormFieldModule, MatInputModule,
+  MatOptionModule, MatSelectModule, MatCardModule } from '@angular/material';
 import { AlumnoManagerComponent } from './alumno-manager/alumno-manager.component';
 import { AlumnoListaComponent } from './alumno-lista/alumno-lista.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { AlumnoEdicionComponent } from './alumno-edicion/alumno-edicion.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     MenuComponent,
     AlumnoManagerComponent,
     AlumnoListaComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    AlumnoEdicionComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,10 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     MatIconModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
