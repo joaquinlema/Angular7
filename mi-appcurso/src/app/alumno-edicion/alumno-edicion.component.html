@@ -1,0 +1,63 @@
+<mat-card>
+  <h2>Alumno Seleccionado</h2>
+  <form #f="ngForm">
+      <mat-form-field class="all-width">
+          <input matInput required #nombre="ngModel"
+                name="nombre"
+                placeholder="Nombre"
+                [ngModel]="alumno.nombre">
+      </mat-form-field>
+      <mat-error *ngIf="nombre.invalid">Debe ingresar el nombre</mat-error>
+
+      <mat-form-field class="all-width">
+          <input matInput required #apellido="ngModel"
+                name="apellido"
+                placeholder="Apellido"
+                [ngModel]="alumno.apellido">
+      </mat-form-field>
+      <mat-error *ngIf="apellido.invalid">Debe ingresar el apellido</mat-error>
+
+      <mat-form-field  class="all-width">
+        <mat-select placeholder="Perfil" [ngModel]="alumno.perfilID" name="perfilID">
+            <mat-option *ngFor="let perfil of Perfiles()" [value]="perfil.id">
+              {{ perfil.descripcion }}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <br>
+      Sexo<br>
+      <mat-radio-group
+        [ngModel] = "alumno.sexoID"
+        name="sexoID">
+        <mat-radio-button class="all-width"
+          *ngFor="let sexo of Sexos()"
+          [value] = "sexo.id">
+          {{sexo.descripcion}}<br>
+        </mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <br>
+      <mat-checkbox [ngModel]="alumno.activo" name="activo" >
+          Activo
+      </mat-checkbox>
+      <br>
+      <hr>
+      <br>
+      <button mat-button color="secondary"
+        (click) = "cancelar()">
+        Cancelar
+      </button>
+      <button mat-button color="primary"
+          [disabled]="f.invalid"
+          (click) = "guardar(f.value)">
+        Aceptar
+      </button>
+
+  </form>
+  <!--
+  <br><br>
+ {{ alumno | json }}  <br><br>
+  {{ f.valid | json }}<br><br>
+  {{ f.value | json }}<br><br> -->
+
+</mat-card>
