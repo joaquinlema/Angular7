@@ -6,7 +6,7 @@ styleUrls: ['./search-box.component.css']
 })
 export class SearchBoxComponent implements OnInit {
 
-  @Output() Search = new EventEmitter<string>();
+  @Output() filtrar = new EventEmitter<string>();
 
 constructor() { }
 
@@ -14,7 +14,7 @@ ngOnInit() {
 }
 
 Buscar(buscar: string) {
-this.Search.emit(buscar);
+  this.filtrar.emit(buscar);
 }
 
 }

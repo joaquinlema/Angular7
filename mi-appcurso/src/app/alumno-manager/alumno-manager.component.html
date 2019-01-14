@@ -1,13 +1,18 @@
 <div class="grid-container">
   <div class="columnaizq">
-    <app-search-box (Search)="Filtrar($event)"></app-search-box>
+    <app-search-box (filtrar)="filtrarAlumnos($event)"></app-search-box>
     <app-alumno-lista
       [alumnos]="alumnos"
-      (Seleccionar)="SeleccionarAlumno($event)">
+      [materias]="materias"
+      (seleccion)="SeleccionarAlumno($event)">
     </app-alumno-lista>
   </div>
   <div class="columnaDer">
-    <app-alumno-edicion></app-alumno-edicion>
+    <app-alumno-edicion *ngIf="alumnoSeleccionado"
+    [alumno] = "alumnoSeleccionado"
+    (cerrar)="cerrarPanelEdicion($event)"
+    >
+  </app-alumno-edicion>
   </div>
 </div>
 

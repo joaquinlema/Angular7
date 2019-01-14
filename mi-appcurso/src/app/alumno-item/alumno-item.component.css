@@ -6,7 +6,8 @@
   grid-template-columns: 50px 150px;
   grid-template-rows: 1.5rem 1rem;
   grid-template-areas: "imagen nombre"
-  "imagen perfil";
+  "imagen perfil"
+  "imagen materia";
   width: 100%;
   }
   .imagen {
@@ -24,7 +25,7 @@
   font-weight: 500;
   font-size: 1.1rem;
   }
-  .perfil {
+  .perfil{
   grid-area: perfil;
   align-self: start;
   padding-left: 10px;
@@ -35,6 +36,17 @@
   letter-spacing: 1px;
   font-weight: 700;
   }
+
+  .materia{
+    grid-area: materia;
+    align-self: start;
+    padding-left: 10px;
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+    color: rgba(51, 51, 51, 0.50);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;}
 
   .seleccionado{
     background-color: #606fc8;

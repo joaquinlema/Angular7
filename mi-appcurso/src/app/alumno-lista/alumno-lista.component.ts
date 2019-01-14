@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Alumno } from '../entities/alumno.entity';
+import { Materias } from '../entities/materias.entity';
 
 @Component({
   selector: 'app-alumno-lista',
@@ -9,8 +10,9 @@ import { Alumno } from '../entities/alumno.entity';
 export class AlumnoListaComponent implements OnInit {
 
   @Input() alumnos: Alumno[];
+  @Input() materias: Materias[];
   @Input() alumnoSeleccionado: Alumno;
-  @Output() Seleccionar = new EventEmitter<Alumno>();
+  @Output() seleccion = new EventEmitter<Alumno>();
 
   constructor() { }
 
@@ -19,7 +21,7 @@ export class AlumnoListaComponent implements OnInit {
 
   SeleccionarAlumno(alumno: Alumno) {
     this.alumnoSeleccionado = alumno;
-    this.Seleccionar.emit(alumno);
+    this.seleccion.emit(alumno);
   }
 
 }

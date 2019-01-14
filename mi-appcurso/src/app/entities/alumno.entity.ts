@@ -5,24 +5,21 @@ export class Alumno {
   public apellido: string,
   public sexoID: number,
   public activo: boolean,
-  public perfilID: number
+  public perfilID: number,
+  public materiaID: number
   ) {}
 }
-
-// const alumnoData = new Alumno(1, 'Juan', 'Perez', 1, true, 0);
-
-// export { alumnoData };
 
 export class AlumnoData {
   private alumnos: Alumno[] = [
     {id: 1, nombre: 'Juan', apellido: 'Perez', sexoID: 1 , perfilID: 0, activo:
-    true},
+    true, materiaID: 4},
     {id: 2, nombre: 'Pedro', apellido: 'Garcia', sexoID: 1 , perfilID: 1, activo:
-    true},
+    true, materiaID: 1},
     {id: 3, nombre: 'Ana', apellido: 'Romero', sexoID: 0, perfilID: 2, activo:
-    true},
-    {id: 4, nombre: 'Maria', apellido: 'Gutierrez', sexoID: 0, perfilID: 0,
-    activo: true}
+    true, materiaID: 2},
+    {id: 4, nombre: 'Maria', apellido: 'Gutierrez', sexoID: 0, perfilID: 1,
+    activo: true, materiaID: 3}
   ];
   constructor() {}
 
@@ -36,5 +33,10 @@ export class AlumnoData {
 
   SearchByNombreApellido(nombre: string) {
     return this.alumnos.filter(item => (item.nombre + ' ' + item.apellido).toLowerCase().indexOf(nombre.toLowerCase()) >= 0);
+  }
+
+  Update(alumno: Alumno) {
+    const pos = this.alumnos.findIndex( al => al.id === alumno.id);
+    this.alumnos[pos] = alumno;
   }
 }

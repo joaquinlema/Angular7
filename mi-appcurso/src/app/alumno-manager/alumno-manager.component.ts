@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Alumno, AlumnoData } from '../entities/alumno.entity';
+import { Materias, MateriasData } from '../entities/materias.entity';
 
 @Component({
   selector: 'app-alumno-manager',
@@ -9,12 +10,16 @@ import { Alumno, AlumnoData } from '../entities/alumno.entity';
 export class AlumnoManagerComponent implements OnInit {
 
   private _alumnosData: AlumnoData;
+  private _materiasData: MateriasData;
   alumnoSeleccionado: Alumno = null;
   alumnos: Alumno[];
+  materias: Materias[];
 
   constructor() {
     this._alumnosData  = new AlumnoData(); // deberia ser un servicip luego se cambiara
+    this._materiasData = new MateriasData();
     this.alumnos = this._alumnosData.GetAll();
+    this.materias = this._materiasData.GetAll();
   }
 
   ngOnInit() {
@@ -22,11 +27,18 @@ export class AlumnoManagerComponent implements OnInit {
 
   SeleccionarAlumno(alumno: Alumno) {
     this.alumnoSeleccionado = alumno;
-    console.log(alumno);
   }
 
-  Filtrar(filtrar: string) {
+  filtrarAlumnos(filtrar: string) {
      this.alumnos = this._alumnosData.SearchByNombreApellido(filtrar);
+    }
+
+    cerrarPanelEdicion(alumno: Alumno) {
+      if (alumno) {
+        this._alumnosData.Update(alumno);
+      }
+
+      this.alumnoSeleccionado = null;
     }
 
 }

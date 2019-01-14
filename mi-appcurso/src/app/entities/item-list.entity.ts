@@ -28,9 +28,21 @@ export class PerfilesList extends GenericList {
   constructor() {
     super();
     this.list = [
-      new ItemList(0 , 'Desarrollador Junior '),
-      new ItemList(1 , 'Desarrollador Semi'),
-      new ItemList(2 , 'Desarrollador Senior'),
+      new ItemList(0 , 'Desarrollador'),
+      new ItemList(1 , 'Lider'),
+      new ItemList(2 , 'Tester'),
+    ];
+  }
+}
+
+export class CarrerasList extends GenericList {
+  constructor() {
+    super();
+    this.list = [
+      new ItemList(0 , 'Tecnicatura CS'),
+      new ItemList(1 , 'Ingenieria'),
+      new ItemList(2 , 'Consultoria'),
+      new ItemList(3 , 'Licenciatura'),
     ];
   }
 }
